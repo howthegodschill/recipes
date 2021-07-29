@@ -11,7 +11,7 @@ See the following URLs for more info:
     http://ftp.mozilla.org/pub/thunderbird/releases/latest/README.txt
     http://ftp.mozilla.org/pub/thunderbird/releases/latest-beta/README.txt</string>
 	<key>Identifier</key>
-	<string>com.git.cenic.pkg.ThunderbirdSigned</string>
+	<string>com.github.howthegodschill.pkg.ThunderbirdSigned</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -22,7 +22,7 @@ See the following URLs for more info:
 	<key>MinimumVersion</key>
     <string>2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.git.cenic.download.ThunderbirdSigned</string>
+	<string>com.github.howthegodschill.download.ThunderbirdSigned</string>
 	<key>Process</key>
 	<array>
 			<dict>

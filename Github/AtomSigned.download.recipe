@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Atom.</string>
 	<key>Identifier</key>
-	<string>com.git.cenic.download.AtomSigned</string>
+	<string>com.github.howthegodschill.download.AtomSigned</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Nessus Agent and creates a package</string>
     <key>Identifier</key>
-    <string>org.cenic.git.pkg.NessusAgent</string>
+    <string>com.github.howthegodschill.pkg.NessusAgent</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
