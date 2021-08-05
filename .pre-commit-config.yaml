@@ -12,5 +12,6 @@ repos:
     hooks:
       - id: check-plists
       - id: check-autopkg-recipes
+        args: ["--recipe-prefix=com.github.howthegodschill."]
       - id: forbid-autopkg-overrides
       - id: forbid-autopkg-trust-info
