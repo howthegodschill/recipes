@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Nessus Agent and creates a package</string>
     <key>Identifier</key>
-    <string>com.github.howthegodschill.pkg.NessusAgent</string>
+    <string>com.github.howthegodschill.pkg.NessusAgentSigned</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -16,7 +16,7 @@
     <key>MinimumVersion</key>
     <string>0.5.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.howthegodschill.download.NessusAgent</string>
+    <string>com.github.howthegodschill.download.NessusAgentSigned</string>
     <key>Process</key>
     <array>
         <dict>
