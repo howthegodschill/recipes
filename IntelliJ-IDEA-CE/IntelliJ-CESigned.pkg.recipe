@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest IntelliJ Community Edition and creates a signed package. The installer package includes a preinstall script that will check for an existing IntelliJ IDEA CE.app in /Applications and remove it if found.</string>
 	<key>Identifier</key>
-	<string>com.github.howthegodschill.pkg.intellijideacesigned</string>
+	<string>com.github.howthegodschill.pkg.IntellijIDEACESigned</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.howthegodschill.download.intellijideacesigned</string>
+	<string>com.github.howthegodschill.download.IntellijIDEACESigned</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -46,7 +46,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/IntelliJ IDEA CE.app</string>
 				<key>source_path</key>
 				<string>%pathname%/*.app</string>
 			</dict>
