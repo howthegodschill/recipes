@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Firefox, then uploads to the Jamf Pro Server.</string>
+	<key>Identifier</key>
+	<string>com.github.howthegodschill.jamf.googlechromepkg-pkg-upload</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GoogleChrome</string>
+		<key>CATEGORY</key>
+		<string>Browsers</string>
+		<key>WEBHOOK</key>
+		<string>Put_webhook_into_AutoPkg_recipe_override</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.pkg.googlechromepkg</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category_name</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JamfCategoryUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JamfPackageUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>PKG_CATEGORY</key>
+				<string>%CATEGORY%</string>
+				<key>slack_webhook_url</key>
+				<string>%WEBHOOK%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JamfUploaderSlacker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
