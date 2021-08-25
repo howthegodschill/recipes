@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads Thunderbird disk image.
+	<string>Downloads Thunderbird package.
 Some useful values for RELEASE are: 'latest', 'beta-latest'.
 LOCALE controls the language localization to be downloaded.
 Examples include 'en-US', 'de', 'sv-SE', and 'zh-TW'
