@@ -10,8 +10,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>Communicator</string>
-		<key>SIGNINGCERTIFICATE</key>
-		<string>Put_Signing_Certificate_into_AutoPkg_recipe_override</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.0</string>
@@ -81,17 +79,6 @@
 									</array>
 							</dict>
 					</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>PkgSigner</string>
-				<key>Arguments</key>
-				<dict>
-					<key>pkg_path</key>
-					<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
-					<key>signing_cert</key>
-					<string>%SIGNINGCERTIFICATE%</string>
-				</dict>
 			</dict>
 	</array>
 </dict>
