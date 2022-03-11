@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>PyCharm CE</string>
+        <string>PyCharm CE AS</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
@@ -37,9 +37,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/PyCharm CE.app</string>
+                <string>%pathname%/PyCharm CE AS.app</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/PyCharm CE.app</string>
+                <string>%pkgroot%/Applications/PyCharm CE AS.app</string>
             </dict>
         </dict>
         <dict>
@@ -48,7 +48,7 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%pkgroot%/Applications/PyCharm CE.app</string>
+                <string>%pkgroot%/Applications/PyCharm CE AS.app</string>
                 <key>plist_keys</key>
                 <dict>
                     <key>CFBundleShortVersionString</key>
