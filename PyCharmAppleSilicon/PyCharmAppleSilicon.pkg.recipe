@@ -37,9 +37,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/PyCharm CE AS.app</string>
+                <string>%pathname%/PyCharm CE.app</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/PyCharm CE AS.app</string>
+                <string>%pkgroot%/Applications/PyCharm CE.app</string>
             </dict>
         </dict>
         <dict>
@@ -48,7 +48,7 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%pkgroot%/Applications/PyCharm CE AS.app</string>
+                <string>%pkgroot%/Applications/PyCharm CE.app</string>
                 <key>plist_keys</key>
                 <dict>
                     <key>CFBundleShortVersionString</key>
@@ -66,7 +66,7 @@
                 <key>pkg_request</key>
                 <dict>
                     <key>pkgname</key>
-                    <string>PyCharmCE-%version%</string>
+                    <string>PyCharmCEAS-%version%</string>
                     <key>pkgdir</key>
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>id</key>
