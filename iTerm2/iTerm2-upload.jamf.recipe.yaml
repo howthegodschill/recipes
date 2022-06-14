@@ -11,7 +11,9 @@ Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
   Arguments:
     category_name: '%CATEGORY%'
+    jcds_mode: True
 
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
   Arguments:
     pkg_category: '%CATEGORY%'
+    jcds_mode: True
