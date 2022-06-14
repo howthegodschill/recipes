@@ -1,0 +1,16 @@
+Identifier: com.github.howthegodschill.jamf.zoom.us-pkg-upload
+ParentRecipe: com.github.homebysix.pkg.Zoom
+MinimumVersion: '2.3'
+
+Input:
+  NAME: zoom.us
+  CATEGORY: Communication
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+  Arguments:
+    category_name: '%CATEGORY%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
