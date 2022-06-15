@@ -1,11 +1,10 @@
-Comment: Recipe automatically generated from com.github.jss-recipes.jss.iTerm2 by JamfRecipeMaker
-Identifier: com.github.howthegodschill.jamf.iTerm2-upload
-ParentRecipe: io.github.hjuutilainen.pkg.iTerm2
+Identifier: com.github.howthegodschill.jamf.LastPass-upload
+ParentRecipe: com.github.poundbangbash.eholtam-recipes.pkg.LastPass_Safari
 MinimumVersion: '2.3'
 
 Input:
-  NAME: iTerm2
-  CATEGORY: Development
+  NAME: LastPass
+  CATEGORY: Security
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
