@@ -1,0 +1,20 @@
+Description: Uploads Nessus Agent pkg to Jamf
+Identifier: com.github.howthegodschill.jamf.Nessus_Agent_Upload
+ParentRecipe: com.github.smithjw.pkg.Nessus_Agent
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Nessus Agent
+  SOFTWARE_TITLE: Nessus_Agent
+  CATEGORY: Security
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+  Arguments:
+    category_name: '%CATEGORY%'
+    jcds_mode: True
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
+    jcds_mode: True
