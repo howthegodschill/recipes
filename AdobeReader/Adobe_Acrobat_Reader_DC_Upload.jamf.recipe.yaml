@@ -1,0 +1,19 @@
+Identifier: com.github.howthegodschill.jamf.Adobe_Acrobat_Reader_DC_Upload
+ParentRecipe: com.github.autopkg.pkg.AdobeReaderDC
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Adobe Acrobat Reader DC
+  SOFTWARE_TITLE: Adobe_Acrobat_Reader_DC
+  CATEGORY: Productivity
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: '%CATEGORY%'
+      jcds_mode: True
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: '%CATEGORY%'
+      jcds_mode: True
