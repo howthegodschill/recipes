@@ -1,5 +1,5 @@
 Identifier: com.github.howthegodschill.jamf.zoom.us-pkg-upload
-ParentRecipe: com.github.homebysix.pkg.Zoom
+ParentRecipe: com.github.smithjw.pkg.zoom_it
 MinimumVersion: '2.3'
 
 Input:
