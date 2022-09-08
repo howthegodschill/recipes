@@ -1,11 +1,10 @@
-Identifier: com.github.howthegodschill.jamf.Thunderbird-upload
+Identifier: com.github.howthegodschill.jamf.Thunderbird-pkg-upload
 ParentRecipe: com.github.autopkg.pkg.Thunderbird
 MinimumVersion: '2.3'
 
 Input:
   NAME: Thunderbird
   CATEGORY: Communication
-
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
