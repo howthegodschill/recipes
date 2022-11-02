@@ -1,0 +1,16 @@
+Identifier: com.github.howthegodschill.recipes.jamf.Wireshark-Arm-pkg-upload
+ParentRecipe: com.github.howthegodschill.pkg.Wireshark
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Wireshark
+  CATEGORY: Utilities
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+  Arguments:
+    category_name: '%CATEGORY%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
