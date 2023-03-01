@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://swdl.mitel.com/swdl/clearspan/communicator.osx-22.7.1.dmg</string>
+				<string>https://clearspan-communicator.s3.amazonaws.com/Communicator.bc-uc.osx-22.9.20.166.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -38,7 +38,7 @@
 				<key>input_path</key>
 				<string>%pathname%/Communicator.app</string>
 				<key>requirement</key>
-				<string>identifier "com.broadsoft.communicator" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = D775LZJG9V</string>
+				<string>identifier "com.broadsoft.communicator" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = TDNYQP7VRK</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
