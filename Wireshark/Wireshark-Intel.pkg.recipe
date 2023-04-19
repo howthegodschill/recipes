@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Wireshark and builds a pkg.</string>
 	<key>Identifier</key>
-	<string>com.github.howthegodschill.pkg.Wireshark</string>
+	<string>com.github.howthegodschill.pkg.Wireshark-Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
