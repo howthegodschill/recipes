@@ -1,0 +1,30 @@
+---
+Description: Downloads the latest version of Notion for Apple Silicon.
+Identifier: com.github.howthegodschill.arm.download.Notion
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Notion
+  ARCHITECTURE: apple-silicon
+
+Process:
+  - Processor: URLDownloader
+    Arguments:
+      filename: '%NAME%-%ARCHITECTURE%.dmg'
+      url: 'https://www.notion.so/desktop/apple-silicon/download'
+
+  - Processor: EndOfCheckPhase
+
+  - Processor: AppDmgVersioner
+    Arguments:
+      dmg_path: '%pathname%'
+
+  - Processor: CodeSignatureVerifier
+    Arguments:
+      input_path: '%pathname%/%app_name%'
+      requirement: |
+        anchor apple generic and (certificate
+        1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13]
+        /* exists */ and certificate leaf[subject.OU] = "LBQJ96FQ8D")
+      deep_verification: true
+      strict_verification: true
