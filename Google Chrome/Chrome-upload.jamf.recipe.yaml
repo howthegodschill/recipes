@@ -1,4 +1,4 @@
-Identifier: com.github.howthegodschill.jamf.Chrome-upload
+Identifier: com.github.howthegodschill.jamf.googlechrome.upload
 ParentRecipe: com.github.autopkg.pkg.googlechrome
 MinimumVersion: '2.3'
 
@@ -7,11 +7,6 @@ Input:
   CATEGORY: Browsers
 
 Process:
-- Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
-  Arguments:
-    category_name: '%CATEGORY%'
-    jcds_mode: True
-
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
   Arguments:
     pkg_category: '%CATEGORY%'
