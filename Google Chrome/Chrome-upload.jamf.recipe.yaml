@@ -10,4 +10,4 @@ Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
   Arguments:
     pkg_category: '%CATEGORY%'
-    jcds2_mode: True
+    jcds_mode: True
