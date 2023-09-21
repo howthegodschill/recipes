@@ -1,5 +1,5 @@
 Identifier: com.github.howthegodschill.jamf.Adobe_Acrobat_Reader_DC_Upload
-ParentRecipe: com.github.autopkg.pkg.AdobeReaderDC
+ParentRecipe: com.github.autopkg.pkg.AdobeReader
 MinimumVersion: '2.3'
 
 Input:
