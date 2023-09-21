@@ -1,0 +1,12 @@
+Identifier: com.github.howthegodschill.jamf.Microsoft_Teams-upload
+ParentRecipe: com.github.rtrouton.pkg.microsoftteams
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Microsoft Teams
+  CATEGORY: Microsoft Office Suite
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
