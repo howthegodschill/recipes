@@ -1,0 +1,12 @@
+Identifier: com.github.howthegodschill.jamf.Notion-arm-upload
+ParentRecipe: com.github.howthegodschill.arm.pkg.Notion
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Notion (Arm)
+  CATEGORY: Productivity
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
