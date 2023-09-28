@@ -1,7 +1,7 @@
 ---
-Description: Downloads the latest version of Notion for Intel and creates a package.
-Identifier: com.github.howthegodschill.intel.pkg.Notion
-ParentRecipe: com.github.howthegodschill.intel.download.Notion
+Description: Downloads the latest version of Notion for Apple Silicon and creates a package.
+Identifier: com.github.howthegodschill.pkg.Notion
+ParentRecipe: com.github.howthegodschill.download.Notion
 MinimumVersion: '2.3'
 
 Input:
@@ -29,7 +29,7 @@ Process:
         id: '%bundleid%'
         options: purge_ds_store
         pkgdir: '%RECIPE_CACHE_DIR%'
-        pkgname: '%NAME%-%ARCHITECTURE%-%version%'
+        pkgname: '%NAME%-%version%'
 
   - Processor: com.github.smithjw.processors/FriendlyPathDeleter
     Arguments:
