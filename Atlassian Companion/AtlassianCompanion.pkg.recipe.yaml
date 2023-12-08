@@ -1,0 +1,11 @@
+---
+Description: Downloads the latest version of Atlassian Companion and creates a package.
+Identifier: com.github.howthegodschill.pkg.AtlassianCompanion
+ParentRecipe: com.github.howthegodschill.download.AtlassianCompanion
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Atlassian Companion
+
+Process:
+  - Processor: AppPkgCreator
