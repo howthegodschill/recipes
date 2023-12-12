@@ -1,0 +1,26 @@
+Description: Downloads the latest version of Slack
+Identifier: com.github.howthegodschill.download.Slack
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Slack
+
+Process:
+  - Processor: URLDownloader
+    Arguments:
+      filename: '%NAME%.dmg'
+      url: 'https://slack.com/ssb/download-osx-universal'
+
+  - Processor: EndOfCheckPhase
+
+  - Processor: AppDmgVersioner
+    Arguments:
+      dmg_path: '%pathname%'
+
+  - Processor: CodeSignatureVerifier
+    Arguments:
+      input_path: '%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/Slack.app'
+      requirement: |
+        identifier "com.tinyspeck.slackmacgap" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = BQR82RBBHL
+      deep_verification: true
+      strict_verification: true
