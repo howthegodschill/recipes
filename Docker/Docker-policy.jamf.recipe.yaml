@@ -87,7 +87,3 @@ Process:
       replace_policy: "%POLICY_REPLACE%"
       frequency: "%POLICY_FREQUENCY%"
       policy_category: "%POLICY_CATEGORY%"
-
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfUploaderSlacker
-    Arguments:
-      PKG_CATEGORY: "%CATEGORY%"
