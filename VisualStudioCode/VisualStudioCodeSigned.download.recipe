@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Visual Studio Code.</string>
+	<string>Downloads the latest version of Visual Studio Code.</string>
 	<key>Identifier</key>
-	<string>com.github.howthegodschill.download.visualstudiocodesigned</string>
+	<string>com.github.howthegodschill.download.visualstudiocode</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
