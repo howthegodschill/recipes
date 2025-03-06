@@ -3,22 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of VS Code and makes a pkg of it</string>
+	<string>Downloads the latest version of Visual Studio Code and creates a package</string>
 	<key>Identifier</key>
-	<string>com.github.howthegodschill.pkg.visualstudiocodesigned</string>
+	<string>com.github.howthegodschill.pkg.visualstudiocode</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Visual Studio Code</string>
 		<key>PKG_ID</key>
 		<string>com.microsoft.VSCode</string>
-		<key>SIGNINGCERTIFICATE</key>
-		<string>Put_Signing_Certificate_into_AutoPkg_recipe_override</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.howthegodschill.download.visualstudiocodesigned</string>
+	<string>com.github.howthegodschill.download.visualstudiocode</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -93,8 +91,6 @@
 			<dict>
 				<key>pkg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
-				<key>signing_cert</key>
-				<string>%SIGNINGCERTIFICATE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgSigner</string>
