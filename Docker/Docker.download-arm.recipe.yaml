@@ -12,7 +12,6 @@ Process:
     Arguments:
       re_pattern: 'https://desktop\.docker\.com/mac/main/%PLATFORM_ARCH%/[A-Za-z0-9]+/Docker\.dmg'
       result_output_var_name: 'DOWNLOAD_URL'
-      url: 'https://docs.docker.com/desktop/release-notes/'
 
   - Processor: URLDownloader
     Arguments:
