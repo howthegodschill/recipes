@@ -6,20 +6,17 @@ MinimumVersion: '2.3'
 Input:
   NAME: Docker
   ARCHITECTURE: arm64
+  DOWNLOAD_TYPE: arm64
 
 Process:
-  - Processor: URLTextSearcher
+  - Processor: com.github.jgstew.SharedProcessors/URLDownloaderPython
     Arguments:
-      re_pattern: ((\w+):\/\/(\S*)(%DOWNLOAD_TYPE%)(\S*)(dmg)(?=\?))
-      result_output_var_name: match
-      url: https://www.docker.com/get-started
-
-  - Processor: URLDownloader
-    Arguments:
-      filename: '%NAME%-%ARCHITECTURE%.dmg'
-      url: '%DOWNLOAD_URL%'
+      filename: 'Docker-%ARCHITECTURE%.dmg'
+      download_dir: '%RECIPE_CACHE_DIR%/downloads'
+      url: 'https://desktop.docker.com/mac/main/%DOWNLOAD_TYPE%/Docker.dmg'
 
   - Processor: EndOfCheckPhase
+  - Processor: com.github.jgstew.SharedProcessors/StopProcessingIfDownloadUnchanged
 
   - Processor: AppDmgVersioner
     Arguments:
@@ -27,7 +24,7 @@ Process:
 
   - Processor: CodeSignatureVerifier
     Arguments:
-      input_path: '%pathname%/%app_name%'
+      input_path: '%RECIPE_CACHE_DIR%/downloads/Docker-%ARCHITECTURE%.dmg/Docker.app'
       requirement: |
         anchor apple generic and identifier "com.docker.docker" and (certificate
         leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6]
